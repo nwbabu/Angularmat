@@ -1,0 +1,31 @@
+<form  novalidate> 
+  
+    <div class="example-container">
+        <mat-form-field>
+          <input matInput placeholder="Login" [(ngModel)]="model.Login" 
+          name="loginId" #loginId="ngModel">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password" [(ngModel)]="model.password" 
+          name="loginPassword" #loginPassword="ngModel">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-select placeholder="Select Domain">
+            <mat-option value="IT">IT</mat-option>
+            <mat-option value="TECH">TECH</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="btn btn-primary">
+        <button mat-button (click)="login()">Login</button>
+       </div>
+      </div>
+      <br>
+   <mat-spinner [style.display]="showError ?'block':'none'"> </mat-spinner>
+   <mat-card *ngIf="errorDisplay" style="background:red">
+    <h3>
+      {{errorDisplay}}
+    </h3>
+   </mat-card>
+</form>

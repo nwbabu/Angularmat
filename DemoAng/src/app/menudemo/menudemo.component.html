@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-content>
+    <button mat-raised-button color="primary" [matMenuTriggerFor]="menu">
+      Menu
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+       
+        <span>
+          <a class="nav-link" (click)="goHome()">Home</a>
+        </span>
+      </button>
+      <button mat-menu-item >
+       
+        <span>
+          <a class="nav-link" (click)="goLogin()">login</a>
+        </span>
+      </button>
+      <button mat-menu-item>
+        
+        <span>
+          <a class="nav-link" (click)="goAbout()">About</a>
+        </span>
+      </button>
+    </mat-menu>
+    
+  </mat-card-content>
+</mat-card>
+
+
