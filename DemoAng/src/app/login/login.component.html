@@ -20,6 +20,10 @@
         <div class="btn btn-primary">
         <button mat-button (click)="login()">Login</button>
        </div>
+       <div>
+          <!--<button mat-button (click)="openDialog()">Register</button>-->
+          <a mat-hyperlink (click)="openDialog()">Regngister </a>
+       </div>
       </div>
       <br>
    <mat-spinner [style.display]="showError ?'block':'none'"> </mat-spinner>
